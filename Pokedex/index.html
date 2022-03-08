@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Rampart+One&   display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <div class="navbar" >
+        <h1>¿Quién es esté Pokemon?</h1>
+    </div>
+
+    <!-- Paginas principales -->
+
+    <!-- Pagina de inicio -->
+    <div class="firstBody" id="firstBody" >
+        <img 
+            src="./images/background.png" 
+            alt="background" 
+            id="firstBodyImg" >
+        <button  
+            onclick="animation()" 
+            class="pokebolaButton" 
+            id="pokebolaButton" > </button>
+    </div>
+    <!-- Pagina Pokeapi -->
+    <div class="secondBody" id="secondBody">
+        <img 
+            src="./images/pokedex.png" 
+            alt="backgroundPokedex" 
+            id="backgroundPokedex" 
+            class="backgroundPokedex" >
+
+        <img 
+            src="./images/pokeImg.jpg"
+            alt="backgroundPokeimg" 
+            id="backgroundPokeimg" 
+            class="backgroundPokeimg" >
+
+        <form
+            class="formApi" >
+                <input 
+                    type="text" 
+                    class="inputSearch"
+                    id="inputSearch" >
+                <button
+                    type="button"
+                    class="buttonSearch"
+                    id="buttonSearch" >
+                </button>
+                <div
+                    class="pokeInfo" >
+                        <h3 >Movimientos</h3>
+                        <div
+                            id="pokeInfoDiv" ></div>
+                        <details
+                            id="pokeInfoDetails" >
+                        </details>
+                </div>
+                <div
+                    id="detailsLoading"
+                    class="detailsLoading" >
+                    <img 
+                        src="https://cdn.dribbble.com/users/547574/screenshots/2391053/preloader1.gif" 
+                        alt="Loading..."
+                        id="detailsLoading" >
+                </div>
+                <div
+                    class="pokeImgDiv" >
+                        <img 
+                            src="https://cdn.dribbble.com/users/1008697/screenshots/2853651/pokeball.gif"
+                            alt="pokeimg"
+                            id="pokeimg" >
+                </div>
+
+                <button
+                    type="button"
+                    class="buttonNext"
+                    id="buttonNext" >
+                </button>
+                <button
+                    type="button"
+                    class="buttonBack"
+                    id="buttonBack" >
+                </button>
+
+                <button
+                    type="button"
+                    class="buttonNextInfo"
+                    id="buttonNextInfo" >
+                </button>
+                <button
+                    type="button"
+                    class="buttonBackInfo"
+                    id="buttonBackInfo" >
+                </button>
+        </form>
+        
+    </div>
+
+
+    <!-- Pagina de load -->
+    <div class="lockBody" id="backgroundLock" >
+        <img 
+            src="./images/lock.jpg"
+            alt="backgroundLock"
+            class="backgroundLock" >
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

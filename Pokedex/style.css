@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    overflow: hidden;
+    background-color: #fdd42c;
+}
+
+/*-------------------Navbar--------------*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background-color: #b89f12cb;
+
+    border: 3px solid;
+    border-image: linear-gradient(120deg, #bf2100, #ffb81c, #3a74d2) 1;
+
+    overflow: hidden;
+
+    z-index: 100;
+    font-size: 80%;
+}
+
+.navbar > h1 {
+    font-family: 'Rampart One', cursive;
+
+    position: relative;
+    top: -8%;
+    left: 33.5%;
+
+    color: #5c0a0a;
+}
+
+
+/*-------------Pagina de inicio---------------*/
+.firstBody {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/background2.png");
+
+    position: absolute;
+    top: 0%;
+
+    z-index: 80;
+
+    border: solid 8px #000000;
+}
+
+.firstBody > img {
+    width: 90vw;
+    height: 85vh;
+
+    border: solid 2px #212121;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pokebolaButton {
+    height: 20%;
+    width: 10%;
+
+    background-image: url("./images/pokebola.png");
+    background-size: 100% 100%;
+
+    border-radius: 50%;
+    border: solid 5px #212121;
+
+    position: absolute;
+    top: 40%;
+    left: 21%;
+
+    transition: 2s;
+}
+
+.pokebolaButton:hover {
+    cursor: pointer;
+
+    transform: scale(2);
+}
+
+/*---------------SecondBody------------------------*/
+
+.secondBody {
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 50;
+
+    background-color: #3a74d2;
+
+    display: none;
+}
+
+.backgroundPokedex {
+    width: 70%;
+    height: 100vh;
+    z-index: 40;
+
+    position: relative;
+
+    border: solid 10px #000000;
+}
+
+.backgroundPokeimg {
+    width: 30%;
+    height: 100%;
+    z-index: 40;
+
+    position: absolute;
+    top: 0;
+    left: 70%;
+}
+
+.formApi {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 45;
+}
+
+.inputSearch {
+    position: absolute;
+    top: 40%;
+    left: 39.5%;
+
+    font-family: 'Inconsolata', monospace;
+    border-radius: 10px;
+    background-color: #2a4e61;
+    color: #fff;
+    padding-left: 1.5%;
+    font-size: 25px;
+
+    width: 19%;
+    height: 7.8%;
+}
+
+.buttonSearch {
+    position: absolute;
+    left: 13.97%;
+    top: 58.12%;
+
+    width: 2.3%;
+    height: 4.4%;
+
+    border: solid 2px #000;
+    border-radius: 50%;
+    background-color: #fd1a55;
+    cursor: pointer;
+}
+
+.pokeInfo {
+    position: absolute;
+    left: 12%;
+    top: 37%;
+
+    width: 17.1%;
+    height: 20%;
+
+    background-color: #00d7fd;
+    border-radius: 5px;
+}
+.pokeInfo > h3 {
+    position: relative;
+    top: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 120%;
+}
+.pokeInfo > details {
+    padding: 4% 5% 5% 10%;
+    background-color: #ffffff10;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 6px;
+    transition: height 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #212121;
+
+    width: 90%;
+    position: relative;
+    left: 5%;
+    top: 10%;
+
+    font-size: 130%;
+}
+.pokeInfo > div {
+    width: 60%;
+    height: 30%;
+    position: absolute;
+    left: 24%;
+    top: 30%;
+    background-color: #10d9fd;
+    z-index: 1;
+}
+
+.detailsLoading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    z-index: 120;
+    filter: opacity(85%);
+
+    display: none;
+}
+.detailsLoading > img {
+    width: 100%;
+    height: 100%;
+}
+.pokeInfo > summary {
+    outline: none;
+    cursor: pointer;
+}
+.pokeInfo > details > p {
+    padding-top: 9%;
+    color: #212121;
+}
+
+.pokeInfo > details[open] {
+    height: 140%;
+    cursor: default;
+
+    font-size: 115%;
+}
+.pokeInfo > details:not([open]) {
+    height: 40%;
+}
+
+.pokeImgDiv {
+    position: absolute;
+    left: 71%;
+    top: 21.3%;
+
+    width: 27.9%;
+    height: 56%;
+
+    background-color: rgba(0,0,0,0.1);
+}
+
+.pokeImgDiv > img {
+    width: 100%;
+    height: 100%;
+}
+
+.buttonNext {
+    position: absolute;
+    top: 71.6%;
+    left: 27.3%;
+
+    width: 1.5%;
+    height: 3.5%;
+
+    border-radius: 5px;
+    background-color: #ffffff10;
+    cursor: pointer;
+}
+.buttonBack {
+    position: absolute;
+    top: 71.6%;
+    left: 23.5%;
+
+    width: 1.6%;
+    height: 3.5%;
+
+    border-radius: 5px;
+    background-color: #ffffff10;
+    cursor: pointer;
+}
+.buttonNextInfo {
+    position: absolute;
+    top: 68.4%;
+    left: 25.2%;
+
+    width: 1.9%;
+    height: 3.1%;
+
+    border-radius: 5px;
+    background-color: #ffffff10;
+    cursor: pointer;
+}
+.buttonBackInfo {
+    position: absolute;
+    top: 75%;
+    left: 25.2%;
+
+    width: 1.9%;
+    height: 3.1%;
+
+    border-radius: 5px;
+    background-color: #ffffff10;
+    cursor: pointer;
+}
+
+/*---------------Pagina lock-------------------*/
+
+
+.lockBody {
+    position: absolute;
+    top: -100%;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 110;
+
+    border: solid 7px #000;
+    border-radius: 10px;
+
+}
+
+.backgroundLock {
+    width: 100%;
+    height: 100%;
+
+}

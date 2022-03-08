@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Reto objetos</title>
+  </head>
+
+
+  <body>
+    <!-- Fondo -->
+    <img src="./images/background.jpg" alt="bg" class="bg" />
+
+    <!-- Cuadro de ingreso en cajero -->
+    <div class="box-content" id="box-content">
+      <div class="header-box">
+        <h2>Cajero</h2>
+      </div>
+      <label id="accessIcon" class="fas fa-check"></label>
+
+      <div id="divTextContainer">
+        <p class="text-box" id="text-box"></p>
+      </div>
+      <div id="saldoI" class="saldoI"></div>
+      <div class="line"></div>
+      <input
+        type="submit"
+        class="close-btn"
+        value="Cerrar"
+        onclick="location.reload();"
+        id="click returnButton"
+      />
+    </div>
+
+    <!-- Formulario de ingreso a cajero -->
+    <div id="info"></div>
+    <div class="container">
+      <div class="img" id="imageParent">
+        <img src="./images/image.png" id="image" />
+      </div>
+
+      <div class="login-content">
+        <form action="index.html" id="formulario"  onsubmit="return habilitarForm()" >
+          <img src="./images/perfil.png" alt="perfil" class="perfil" />
+          <h2 class="title">Cajero Virtual</h2>
+
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Usuario</h5>
+              <input type="text" class="input" id="nombre" />
+            </div>
+          </div>
+
+          <div class="input-div pass">
+            <div class="i">
+              <i class="fas fa-key"></i>
+            </div>
+            <div class="div">
+              <h5>Contraseña</h5>
+              <input type="password" class="input" id="password" />
+            </div>
+          </div>
+
+          <input
+            type="submit"
+            class="btn"
+            value="Entrar"
+            onclick="return enviarFormulario();"
+            id="btn"
+          />
+        </form>
+
+        <!-- Validacion incorecta -->
+        <div class="error" id="error"></div>
+      </div>
+      
+    </div>
+
+    <script src="objetosr.js"></script>
+  </body>
+</html>
