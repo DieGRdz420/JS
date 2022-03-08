@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-------------Navbar----------------*/
+
+.navbar {
+    background-color: #efefef;
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.divIcon {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 11%;
+    font-size: 25px;
+
+    color: #767676;
+}
+.divIcon > i {
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.divIcon:hover {
+    cursor: pointer;
+}
+.divIcon > i:hover {
+    background-color: #4342423f;
+}
+
+.form {
+    display: flex;
+
+    width: 77%;
+}
+.inputContainer {
+    width: 100%;
+}
+.inputContainer > input {
+    background: #a080891f;
+    border-radius: 50px;
+    height: 45px;
+
+    position: relative;
+    top: 15px;
+}
+.inputContainer > input:hover {
+    background: #4342423f;
+}
+
+.fa-pinterest {
+    color: #e60023;
+    margin-top: 6px;
+    padding: 5px;
+}
+
+.fa-chevron-down {
+    font-size: 18px;
+    margin-top: 7px;
+
+}
+.homeArrow {
+    visibility: hidden;
+}
+
+.fa-search {
+    visibility: hidden;
+    font-size: 0px;
+}
+
+.divHome {
+    background: #111;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 60px;
+
+    height: 40px;
+    padding-top: 0;
+}
+.divHome > span {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
+
+/*----------------Celdas grid---------------------*/
+.grid-item {
+    background: #212121;
+    text-align: center;
+    border: 1px solid black;
+
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-auto-rows: minmax(250px, 1fr);
+    gap: 20px;
+    padding: 15px;
+    grid-auto-flow: dense;
+}
+
+
+
+
+/*---------------Cards-----------------*/
+
+
+.card-img-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .6s;
+}
+
+.save {
+    visibility: hidden;
+}
+.card-img-overlay:hover > .save {
+    font-size: 23px;
+    padding: 6px 13px;
+    border-radius: 40%;
+    background-color: #e60023;
+
+    position: absolute;
+    right: 8%;
+
+    cursor: pointer;
+    visibility: visible;
+    transition: .6s;
+}
+
+.title {
+    visibility: hidden;
+}
+.card-img-overlay:hover > .title {
+    color: #212121;
+    font-size: 15px;
+    padding: 3px 10px;
+    border-radius: 25px;
+    background-color: blanchedalmond;
+
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+
+    cursor: pointer;
+    visibility: visible;
+    transition: .6s;
+}
+
+.share {
+    visibility: hidden;
+}
+.card-img-overlay:hover > .share {
+    color: #212121;
+    font-size: 15px;
+    padding: 3px 7px;
+    border-radius: 25px;
+    background-color: blanchedalmond;
+
+    position: absolute;
+    bottom: 5%;
+    right: 28%;
+
+    cursor: pointer;
+    visibility: visible;
+    transition: .6s;
+}
+
+.options {
+    visibility: hidden;
+}
+.card-img-overlay:hover > .options {
+    color: #212121;
+    font-size: 15px;
+    padding: 3px 7px;
+    border-radius: 25px;
+    background-color: blanchedalmond;
+
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+
+    cursor: pointer;
+    visibility: visible;
+    transition: .6s;
+}
+.options > span {
+    position: relative;
+    top: 3px;
+}
+
+
+
+
+/*------------------Medias querys-----------------------*/
+
+@media (max-width: 1222px) {
+    .form {
+        width: 70%;
+    }
+    .divIcon {
+        width: 15%;
+    }
+}
+
+@media (max-width: 988px) {
+    .form {
+        width: 60%;
+    }
+    .divIcon {
+        width: 20%;
+    }
+}
+
+@media (max-width: 742px) {
+    .form {
+        width: 50%;
+    }
+    .divIcon {
+        width: 25%;
+    }
+    .homeArrow {
+        visibility: visible;
+    }
+    .arrow-responsive {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 610px) {
+    .form {
+        width: 40%;
+    }
+    .divIcon {
+        width: 30%;
+    }
+    .arrow-responsive {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        width: 30%;
+    }
+    .divIcon {
+        width: 35%;
+    }
+    .arrow-responsive {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 394px) {
+    .form {
+        width: 15%;
+    }
+    .inputContainer > input {
+        display: none;
+    }
+    .fa-search {
+        visibility: visible;
+        font-size: 25px;
+    }
+    .divIcon {
+        width: 40%;
+    }
+    .arrow-responsive {
+        visibility: visible;
+    }
+    .homeArrow {
+        display: none;
+    }
+    .fa-pinterest {
+        font-size: 33px;
+    }
+}

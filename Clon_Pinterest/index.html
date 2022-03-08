@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/962d6988ed.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Pinterest</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+
+            <div class="divIcon" >
+                <i class="fab fa-pinterest"></i>
+                <div class="divHome" >
+                    <span href="#">
+                        Home
+                        <i class="fas fa-chevron-down homeArrow"></i>
+                    </span>
+                </div>
+            </div>
+
+            <form class="d-flexv form">
+               <div class="inputContainer" >
+                    <input 
+                    class="form-control me-2" 
+                    type="search" 
+                    placeholder="🔍 Search" 
+                    aria-label="Search">
+                    <i class="fas fa-search"></i>
+               </div> 
+            </form>
+
+            <div class="divIcon" >
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-comment-dots"></i>
+                <i class="fas fa-user-circle"></i>
+                <i class="fas fa-chevron-down arrow-responsive"></i>
+            </div>
+
+        </div>
+      </nav>
+
+
+    <div class="grid-container" >
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://i.pinimg.com/236x/83/aa/97/83aa97020a6a67a9d65d699b0a192159.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBIVERQSEhIYGRUYGBgSFRIUEhgSEhISGRgZGRgYGBocJC4lHCMrHxkZJzgnOC8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHBISHz0rJSs9NDE0PjY0NDE2NDQ0ND8xNjQ0NDQ0NDQ0NDQ0NDQxNjQ2NDQ0NDQ0MTE0NDQ0NjQ0NP/AABEIASwAqAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAwIEBQYHAQj/xAA+EAACAQIEBAMFBgMGBwAAAAABAgADEQQSITEFQVFhBhMiBzJxgZEUUoKhscEjQtEXYnKSovAVJTNTY5Ph/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAJREBAQACAgICAgIDAQAAAAAAAAECEQMhEjEEQRNRQnEysfAF/9oADAMBAAIRAxEAPwDjMREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQETIHhrLrXYUueRgTWI7UxqO2bKDcWMtaop7JmP95gBf8Ivb6mBDEkRQdzb5E/pJPJT/uD5qw/QGTo2t4l/hsAXOVGDtuFS5cjspsT8Bc9pbNQIF9CNsw1F+h6fO0aEMREgIiICIiAiIgIiICIiAntp6BKgJKNpMJhalWotKmpZ3IREUXLMdgJm6jU8NdcO6tUW61MYuqq53TC/DnU3P8uVdWjGDqUKRqj37FWFyMiMMpBA3vexvpY2tLjwt4cxfEaopUEARPfqm60aIJJuepOvpGp7AXE617N/pgajXJ031JJzMT1JO5lCrfQanoNTPonw/wCy7h2HVTWT7RU5vW/6d+eWmPTb45j3m6YbB06ahaVNUUaBURUUfICNmnyK9Bl1ZWUdSpUfnIws+xiJhOLeFOH4kEV8JSYn+cIEqD4OtmH1kbNPmzhXBGqL5r1PLUGyELmqVGB3RbjQHdiR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" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgaWVFKn8wUOwWx7dnP9tSKvR63AIgkl88hw&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://i.pinimg.com/474x/7c/68/96/7c68961f9dca2f9cad98bc68748ae732.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTupgGojnnNabU0JQ1zQ1ZK8EvOeGr1up0MAJe2kTW0D16whU9hgjXuNVWgUzM2ZkLAcEo&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwzrLbCoevqfuhB-WPIUIgDWIX167rORhRw&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ifuwooPVsiPvB3BVkxGpV-glKaVVbqTxv-YZSTCO1wqmK6xtHbXaLHKSREWwATNW6zw&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTm9fsBaHeKEL4zJrFhyRV8UAXM0tUyYcYcRTDb9GTCSxNhHzDY6DNuJOBJRjc9hqQQ6E&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4_FA2XqlzIOyvT3VjTEIeqC3U5Sa6yYnrJyXq1smwUgFgTw5dx0xv0P-vy8QnXjeW2k&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBNyRxdiptcC7TJ0qLOF3FSqjtH1VHpuCjZuzMGzJiGLP0WLEqoQukGhCP4lIxb4jYL4&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://cdn.statically.io/img/i.pinimg.com/originals/0b/8a/ff/0b8aff3dcb99b83b34a9a8b3879a9469.png" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://i.pinimg.com/originals/d8/47/20/d84720284f20d5865bd415b3866b014a.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://i.pinimg.com/736x/db/4b/24/db4b244651f6e7956486c0a82baf9c3b.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://www.wallpapertip.com/wmimgs/67-678970_skeleton-iphone-7-wallpaper-iphone-7-wallpapers-for.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkYlriFSqekpbLpTcYcGOV-JbRkrejs3I5eA&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://i.pinimg.com/236x/cb/ae/cf/cbaecf2f1a7c3a3d4cba807d91b5ae5f.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://data.whicdn.com/images/328441888/original.jpg" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWRO5yqFSEF4L-XGRGysMqOISDbxcZ-OPiJ5b1F_T17AuBsBRphdi3ufD_Aqxy25I08KA&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaEEU5uMMFcGH92WHOpJufNhO4wWgrEaVQ0Naobwzwn3FnB6kTT6pMsQ9y3v3vygPJNEA&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="card bg-dark text-white">
+                <div class="img-container" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtSMpqmsCfg7avGGXAr1-ko_1Bu0bOO_fSmA&usqp=CAU" class="card-img" alt="...">
+                </div>
+                <div class="card-img-overlay">
+                  <span class="save" >Save</span>
+                  <span class="title" >Image.devf</span>
+                  <span class="share" ><i class="fas fa-share-alt"></i></span>
+                  <span class="options" ><span>°°°</span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
